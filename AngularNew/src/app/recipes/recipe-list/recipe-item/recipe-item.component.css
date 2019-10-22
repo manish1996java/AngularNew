@@ -1,0 +1,23 @@
+.small{
+    width: 7em;
+    height: 5em;
+}
+img{
+    margin-right: 1rem;
+}
+.card-width{
+    width: 100%;
+}
+.row{
+display: flex;
+/* justify-content: space-between; */
+}
+
+.mat-card{
+    margin: 10px 0px;
+}
+.active{
+    color: white;
+    outline: none;
+    background-color: rgb(16, 95, 232);
+}

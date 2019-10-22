@@ -1,0 +1,23 @@
+<mat-card>
+  <form [formGroup]="recipeform" (ngSubmit)="onSubmit()">
+    <button class="mat-raised-button green-clr" type="submit" >save</button>
+    <button class="mat-raised-button red-clr" type="buttn">Delete</button>
+    <mat-form-field class="input-width">
+        <input matInput type="text" formControlName ="name" placeholder="Name"  required>
+    </mat-form-field>
+    <mat-form-field class="input-width">
+        <input matInput type="text" #image formControlName="imagePath" name="" id=""  placeholder="Image Url" required>
+    </mat-form-field>
+    <img mat-card-image [src]="image.value" alt="">
+    <mat-form-field class="input-width">
+        <textarea matInput name="" formControlName="description" id="" cols=" " rows="6"  placeholder="Description" required></textarea>
+    </mat-form-field>
+        <mat-form-field>
+            <input matInput type="text" placeholder="Name">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput type="text" placeholder="Name">
+        </mat-form-field>
+        <button class="mat-button red-clr" type="button">clear</button>
+    </form>
+</mat-card>

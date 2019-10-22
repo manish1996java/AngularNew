@@ -1,0 +1,38 @@
+<mat-card class="myCard" *ngIf="selectedrecipe != null;">
+    <mat-card-header>
+      <mat-card-title>
+        <div class="mat-heading">
+          {{selectedrecipe.name}}
+        </div>
+      </mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="{{selectedrecipe.imagepath}}" alt="">
+    <mat-card-content>
+      <p>
+        {{selectedrecipe.description}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <mat-form-field>
+        <mat-label>Mange recipe</mat-label>
+        <mat-select #selectop>
+            <mat-option (click)="toShoppingList()">
+              to shopping list
+            </mat-option>
+            <mat-option (click)="addEditRecipe()">
+              edit recipe
+             </mat-option>
+             <mat-option (click)="deleteRecipe()">
+              delete recipe
+             </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </mat-card-actions>
+    <mat-card-footer>
+      <mat-list>
+        <mat-list-item class="border" *ngFor="let ingr of selectedrecipe.ingredients">
+            {{ingr.name}} - {{ingr.amt}} 
+        </mat-list-item>
+      </mat-list>
+    </mat-card-footer>
+  </mat-card>

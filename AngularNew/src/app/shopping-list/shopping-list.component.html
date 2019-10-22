@@ -1,0 +1,14 @@
+<app-shopping-edit></app-shopping-edit>
+<mat-divider></mat-divider>
+<mat-accordion *ngFor="let ingr of ingredients;let i = index;">
+    <mat-expansion-panel (click)=onEditIngredients(i)>
+    <mat-expansion-panel-header>
+        <mat-panel-title>
+            {{ingr.name}}
+        </mat-panel-title>
+        <mat-panel-description>
+            ({{ingr.amt}})
+        </mat-panel-description>
+    </mat-expansion-panel-header>
+    </mat-expansion-panel>
+</mat-accordion>

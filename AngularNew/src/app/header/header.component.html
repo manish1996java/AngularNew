@@ -1,0 +1,10 @@
+<mat-toolbar color='primary' class='sadow'>  
+<h2 style="margin-right: 1em">Shop App</h2>
+    <a routerLinkActive="active" routerLink="recipes" mat-button >Recipes</a>
+    <a routerLinkActive="active" routerLink="shopping-list" mat-button >Shoplist</a>
+    <span class="fill"></span>
+    <a routerLinkActive="active" *ngIf="!authencateduser" routerLink="signin" mat-button >SignIn</a>
+    <a routerLinkActive="active" *ngIf="!authencateduser" routerLink="signup" mat-button >SignUp</a>
+    <a routerLinkActive="active" *ngIf="authencateduser"  (click)="logout()"  mat-button >Logout</a>
+    <button mat-button >Manage<mat-icon>arrow_drop_down</mat-icon></button>
+</mat-toolbar>

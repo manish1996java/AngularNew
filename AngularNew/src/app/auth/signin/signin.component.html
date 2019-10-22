@@ -1,0 +1,29 @@
+<mat-card>
+    <form class="form" (ngSubmit)="onSingIn(f)" #f="ngForm">
+        <mat-form-field class="full-width">
+          <input matInput
+          type="text" 
+          placeholder="username"
+          id="username"
+          name="username"
+          ngModel
+          required
+          >
+        </mat-form-field>
+      
+        <mat-form-field class="full-width">
+          <input matInput 
+          type="password"
+          placeholder="password"
+          id="password"
+          name="password"
+          pattern="^(?=.*\d).{4,16}$"
+          ngModel
+          required
+          >
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" type="submit" [disabled]="!f.valid">SignIn</button>
+        <!-- <mat-progress-spinner *ngIf="isloading"></mat-progress-spinner> -->
+    </form>
+</mat-card>

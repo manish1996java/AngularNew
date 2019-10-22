@@ -1,0 +1,6 @@
+<div class="mat-headline">List of the Recipes</div>
+<button mat-raised-button color="primary" (click)='onNewRecipe()'>Save recipe</button>
+<hr>
+<mat-list>
+        <app-recipe-item  style="cursor: pointer" *ngFor="let rec of recipes;let i=index" [recipe]="rec" [index]='i'></app-recipe-item>    
+</mat-list>

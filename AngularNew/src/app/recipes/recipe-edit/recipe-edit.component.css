@@ -1,0 +1,11 @@
+.green-clr{
+    color:white;
+    background-color: rgb(91, 222, 178);
+}
+.red-clr{
+    color:white;
+    background-color: rgb(228, 87, 87);
+}
+.input-width{
+    width: 100%;  
+}

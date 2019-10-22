@@ -1,0 +1,20 @@
+.row{
+    display: flex;
+    justify-content: space-around;
+}
+@media(max-width: 720px){
+    .row{
+        flex-wrap: wrap;
+    }
+}
+app-recipe-list{
+    width:45%;
+}
+app-recipe-detail{
+    margin-left:50px;
+    width:35%;
+}
+.cont-margin{
+    width: 90%;
+    margin: 0 auto;
+}

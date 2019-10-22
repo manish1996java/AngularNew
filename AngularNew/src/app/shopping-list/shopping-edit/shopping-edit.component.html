@@ -1,0 +1,31 @@
+<mat-card>
+<form class="form" (ngSubmit)="onAdd(f)" #f="ngForm">
+    <div class="form-group" >
+      <mat-form-field class="full-width">
+        <input matInput 
+        placeholder="Recipe Name" 
+        type="text" 
+        name="name" 
+        ngModel
+        required
+        >
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input matInput 
+        placeholder="Amt"
+        type="text" 
+        name="amt" 
+        ngModel
+        pattern="^[1-9]+[0-9]*$"
+        required>
+      </mat-form-field>
+        <div>
+            <button class="mat-stroked-button" type="button" (click)="fileupload.click()"> upload image</button>
+            <input class="display-hide" type="file" #fileupload>
+        </div>
+      <button type="submit" mat-raised-button color="primary" [disabled]="!f.valid">{{editMode?'Udate':'Add'}}</button>
+      <button mat-raised-button color="accent" type="button" (click)="onClear()">Clear</button>
+      <button mat-raised-button color="warn" type="button" *ngIf="editMode" (click)="onDelete()">Delete</button>
+    </div>
+</form>
+</mat-card>
